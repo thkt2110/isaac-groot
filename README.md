@@ -4,9 +4,9 @@
 **Original Paper:** [Isaac GR00T: N1 through N1.6](https://arxiv.org/abs/2503.14734)
 
 ## 👥 Team Members
-* [Họ và tên thành viên 1] - [Mã số SV]
-* [Họ và tên thành viên 2] - [Mã số SV]
-* [Họ và tên thành viên 3] - [Mã số SV]
+* Trần Hữu Kim Thành - 23120166
+* Nguyễn Hoàng Minh Trí - 23120179
+* Lê Thái Ngọc - 23122012
 
 ## 📂 Project Structure 
 * `notebooks/`: Contains Colab notebooks for model training (`Mini Implement`) and evaluation.
