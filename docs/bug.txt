@@ -1,0 +1,228 @@
+Time
+#
+Log Message
+11.5s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.5s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.5s	3	0.00s - to python to disable frozen modules.
+11.5s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+12.5s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+12.5s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+12.5s	7	0.00s - to python to disable frozen modules.
+12.5s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+22.5s	9	thkt2110
+22.5s	10	Target subsets:
+22.5s	11	  6. gr1_arms_waist.CanToDrawer
+22.5s	12	
+22.5s	13	Local output: /kaggle/working/gr00t_x_embodiment_sim
+22.5s	14	Report output: /kaggle/working/download_report_6_10.json
+22.7s	15	
+22.7s	16	================================================================================
+22.7s	17	Downloading subset: gr1_arms_waist.CanToDrawer
+3084.7s	18	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.80 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.24 MB free disk space.
+3084.7s	19	  warnings.warn(
+3084.7s	20	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.80 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.24 MB free disk space.
+3084.7s	21	  warnings.warn(
+3084.7s	22	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.37 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.24 MB free disk space.
+3084.7s	23	  warnings.warn(
+3084.7s	24	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.37 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.24 MB free disk space.
+3084.7s	25	  warnings.warn(
+3084.7s	26	
+3084.7s	27	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.80 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.24 MB free disk space.
+3084.7s	28	  warnings.warn(
+3084.7s	29	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.80 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.24 MB free disk space.
+3084.7s	30	  warnings.warn(
+3084.7s	31	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.37 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.24 MB free disk space.
+3084.7s	32	  warnings.warn(
+3084.7s	33	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.37 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.24 MB free disk space.
+3084.7s	34	  warnings.warn(
+3085.1s	35	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.78 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.1s	36	  warnings.warn(
+3085.1s	37	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.78 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.1s	38	  warnings.warn(
+3085.1s	39	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.58 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.1s	40	  warnings.warn(
+3085.1s	41	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.58 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.1s	42	  warnings.warn(
+3085.1s	43	
+3085.1s	44	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.78 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.1s	45	  warnings.warn(
+3085.1s	46	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.78 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.1s	47	  warnings.warn(
+3085.1s	48	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.58 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.1s	49	  warnings.warn(
+3085.1s	50	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.58 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.1s	51	  warnings.warn(
+3085.6s	52	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.74 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	53	  warnings.warn(
+3085.6s	54	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.74 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	55	  warnings.warn(
+3085.6s	56	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.33 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	57	  warnings.warn(
+3085.6s	58	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.33 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	59	  warnings.warn(
+3085.6s	60	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.40 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	61	  warnings.warn(
+3085.6s	62	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.40 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	63	  warnings.warn(
+3085.6s	64	
+3085.6s	65	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.74 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	66	  warnings.warn(
+3085.6s	67	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 1.74 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	68	  warnings.warn(
+3085.6s	69	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.33 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	70	  warnings.warn(
+3085.6s	71	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.33 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	72	  warnings.warn(
+3085.6s	73	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.40 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/.cache/huggingface/download/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	74	  warnings.warn(
+3085.6s	75	/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.40 MB. The target location /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CanToDrawer/videos/chunk-008/observation.images.ego_view only has 0.00 MB free disk space.
+3085.6s	76	  warnings.warn(
+3086.2s	77	Traceback (most recent call last):
+3086.2s	78	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 371, in execute_notebook
+3086.2s	79	    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+3086.2s	80	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 443, in execute_managed_notebook
+3086.2s	81	    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+3086.2s	82	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3086.2s	83	  File "/usr/local/lib/python3.12/dist-packages/papermill/clientwrap.py", line 45, in execute
+3086.2s	84	    self.papermill_execute_cells()
+3086.2s	85	  File "/usr/local/lib/python3.12/dist-packages/papermill/clientwrap.py", line 77, in papermill_execute_cells
+3086.2s	86	    self.nb_man.cell_complete(self.nb.cells[index], cell_index=index)
+3086.2s	87	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 77, in wrapper
+3086.2s	88	    return func(self, *args, **kwargs)
+3086.2s	89	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3086.2s	90	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 274, in cell_complete
+3086.2s	91	    self.save()
+3086.2s	92	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 77, in wrapper
+3086.2s	93	    return func(self, *args, **kwargs)
+3086.2s	94	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3086.2s	95	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 153, in save
+3086.2s	96	    write_ipynb(self.nb, self.output_path)
+3086.2s	97	  File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 486, in write_ipynb
+3086.2s	98	    papermill_io.write(nbformat.writes(nb), path)
+3086.2s	99	  File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 102, in write
+3086.2s	100	    return self.get_handler(path, extensions).write(buf, path)
+3086.2s	101	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3086.2s	102	  File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 215, in write
+3086.2s	103	    f.write(buf)
+3086.2s	104	OSError: [Errno 28] No space left on device
+3086.2s	105	
+3086.2s	106	During handling of the above exception, another exception occurred:
+3086.2s	107	
+3086.2s	108	Traceback (most recent call last):
+3086.2s	109	  File "<string>", line 1, in <module>
+3086.2s	110	  File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 116, in execute_notebook
+3086.2s	111	    nb = papermill_engines.execute_notebook_with_engine(
+3086.2s	112	         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3086.2s	113	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
+3086.2s	114	    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+3086.2s	115	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3086.2s	116	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 374, in execute_notebook
+3086.2s	117	    nb_man.notebook_complete()
+3086.2s	118	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 77, in wrapper
+3086.2s	119	    return func(self, *args, **kwargs)
+3086.2s	120	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3086.2s	121	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 302, in notebook_complete
+3086.2s	122	    self.save()
+3086.2s	123	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 77, in wrapper
+3086.2s	124	    return func(self, *args, **kwargs)
+3086.2s	125	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3086.2s	126	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 153, in save
+3086.2s	127	    write_ipynb(self.nb, self.output_path)
+3086.2s	128	  File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 486, in write_ipynb
+3086.2s	129	    papermill_io.write(nbformat.writes(nb), path)
+3086.2s	130	  File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 102, in write
+3086.2s	131	    return self.get_handler(path, extensions).write(buf, path)
+3086.2s	132	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3086.2s	133	  File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 215, in write
+3086.2s	134	    f.write(buf)
+3086.2s	135	OSError: [Errno 28] No space left on device
+3087.4s	136	/bin/sh: 1: echo: echo: I/O error
+3090.6s	137	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+3090.6s	138	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+3090.9s	139	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+3090.9s	140	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+3091.9s	141	Traceback (most recent call last):
+3091.9s	142	  File "/usr/local/lib/python3.12/dist-packages/traitlets/utils/importstring.py", line 35, in import_item
+3091.9s	143	    pak = getattr(module, obj)
+3091.9s	144	          ^^^^^^^^^^^^^^^^^^^^
+3091.9s	145	AttributeError: module 'remove_papermill_header' has no attribute 'RemovePapermillHeader'
+3091.9s	146	
+3091.9s	147	The above exception was the direct cause of the following exception:
+3091.9s	148	
+3091.9s	149	Traceback (most recent call last):
+3091.9s	150	  File "/usr/local/bin/jupyter-nbconvert", line 10, in <module>
+3091.9s	151	    sys.exit(main())
+3091.9s	152	             ^^^^^^
+3091.9s	153	  File "/usr/local/lib/python3.12/dist-packages/jupyter_core/application.py", line 284, in launch_instance
+3091.9s	154	    super().launch_instance(argv=argv, **kwargs)
+3091.9s	155	  File "/usr/local/lib/python3.12/dist-packages/traitlets/config/application.py", line 1082, in launch_instance
+3091.9s	156	    app.start()
+3091.9s	157	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 369, in start
+3091.9s	158	    self.convert_notebooks()
+3091.9s	159	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 536, in convert_notebooks
+3091.9s	160	    self.exporter = cls(config=self.config)
+3091.9s	161	                    ^^^^^^^^^^^^^^^^^^^^^^^
+3091.9s	162	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 118, in __init__
+3091.9s	163	    self._init_preprocessors()
+3091.9s	164	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 275, in _init_preprocessors
+3091.9s	165	    self.register_preprocessor(preprocessor, enabled=True)
+3091.9s	166	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 236, in register_preprocessor
+3091.9s	167	    preprocessor_cls = import_item(preprocessor)
+3091.9s	168	                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+3091.9s	169	  File "/usr/local/lib/python3.12/dist-packages/traitlets/utils/importstring.py", line 37, in import_item
+3091.9s	170	    raise ImportError("No module named %s" % obj) from e
+3091.9s	171	ImportError: No module named RemovePapermillHeader
+3095.8s	172	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+3095.8s	173	Traceback (most recent call last):
+3095.8s	174	  File "/usr/local/lib/python3.12/dist-packages/nbformat/reader.py", line 19, in parse_json
+3095.8s	175	    nb_dict = json.loads(s, **kwargs)
+3095.8s	176	              ^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	177	  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+3095.8s	178	    return _default_decoder.decode(s)
+3095.8s	179	           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	180	  File "/usr/lib/python3.12/json/decoder.py", line 338, in decode
+3095.8s	181	    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+3095.8s	182	               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	183	  File "/usr/lib/python3.12/json/decoder.py", line 354, in raw_decode
+3095.8s	184	    obj, end = self.scan_once(s, idx)
+3095.8s	185	               ^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	186	json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 144 column 1 (char 4096)
+3095.8s	187	
+3095.8s	188	The above exception was the direct cause of the following exception:
+3095.8s	189	
+3095.8s	190	Traceback (most recent call last):
+3095.8s	191	  File "/usr/local/bin/jupyter-nbconvert", line 10, in <module>
+3095.8s	192	    sys.exit(main())
+3095.8s	193	             ^^^^^^
+3095.8s	194	  File "/usr/local/lib/python3.12/dist-packages/jupyter_core/application.py", line 284, in launch_instance
+3095.8s	195	    super().launch_instance(argv=argv, **kwargs)
+3095.8s	196	  File "/usr/local/lib/python3.12/dist-packages/traitlets/config/application.py", line 1082, in launch_instance
+3095.8s	197	    app.start()
+3095.8s	198	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 369, in start
+3095.8s	199	    self.convert_notebooks()
+3095.8s	200	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 541, in convert_notebooks
+3095.8s	201	    self.convert_single_notebook(notebook_filename)
+3095.8s	202	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 506, in convert_single_notebook
+3095.8s	203	    output, resources = self.export_single_notebook(notebook_filename, resources, input_buffer=input_buffer)
+3095.8s	204	                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	205	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 435, in export_single_notebook
+3095.8s	206	    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+3095.8s	207	                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	208	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 190, in from_filename
+3095.8s	209	    return self.from_file(f, resources=resources, **kw)
+3095.8s	210	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	211	  File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 208, in from_file
+3095.8s	212	    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+3095.8s	213	                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	214	  File "/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py", line 174, in read
+3095.8s	215	    return reads(buf, as_version, capture_validation_error, **kwargs)
+3095.8s	216	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	217	  File "/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py", line 92, in reads
+3095.8s	218	    nb = reader.reads(s, **kwargs)
+3095.8s	219	         ^^^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	220	  File "/usr/local/lib/python3.12/dist-packages/nbformat/reader.py", line 75, in reads
+3095.8s	221	    nb_dict = parse_json(s, **kwargs)
+3095.8s	222	              ^^^^^^^^^^^^^^^^^^^^^^^
+3095.8s	223	  File "/usr/local/lib/python3.12/dist-packages/nbformat/reader.py", line 25, in parse_json
+3095.8s	224	    raise NotJSONError(message) from e
+3095.8s	225	nbformat.reader.NotJSONError: Notebook does not appear to be JSON: '{\n "cells": [\n  {\n   "cell_type": "c...
