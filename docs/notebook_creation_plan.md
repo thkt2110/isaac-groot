@@ -23,7 +23,7 @@ Cách hiểu "from scratch" trong đồ án:
 | 01A | `01_download_subsets_1_5.ipynb` | Đã có | Không cần | Download raw dataset gốc, hiện dùng cho subset 1-5 |
 | 01B | `01_download_subsets_6_10.ipynb` | Đã có | Không cần | Download raw dataset gốc, hiện dùng cho subset 6-10 |
 | 02 | `02_prepare_splits_and_features.ipynb` | Cần tạo | CPU trước, GPU optional | Chuẩn bị train/test split và cache dữ liệu train-ready |
-| 03 | `03_train_dit_from_scratch.ipynb` | Cần tạo | Cần GPU | Train DiT/action head từ scratch ít nhất 1 epoch |
+| 03 | `03_train_dit_from_scratch.ipynb` | Đã có | Cần GPU | Train DiT/action head từ scratch ít nhất 1 epoch |
 | 04 | `04_evaluate_test_split.ipynb` | Cần tạo | GPU khuyến nghị | Evaluation trên test split |
 | 05 | `05_ablation_study.ipynb` | Cần tạo | Cần GPU | Ablation hyperparameters / cấu trúc DiT |
 | 06 | `06_collect_results_for_report.ipynb` | Optional | Không cần | Tổng hợp bảng, biểu đồ, file kết quả cho slide/báo cáo |
