@@ -20,13 +20,45 @@ Cách hiểu "from scratch" trong đồ án:
 
 | Thứ tự | Notebook | Trạng thái | GPU | Vai trò trong plan CK |
 |---:|---|---|---|---|
-| 01A | `01_download_subsets_1_5.ipynb` | Đã có | Không cần | Download raw dataset gốc, hiện dùng cho subset 1-5 |
-| 01B | `01_download_subsets_6_10.ipynb` | Đã có | Không cần | Download raw dataset gốc, hiện dùng cho subset 6-10 |
-| 02 | `02_prepare_splits_and_features.ipynb` | Cần tạo | CPU trước, GPU optional | Chuẩn bị train/test split và cache dữ liệu train-ready |
-| 03 | `03_train_dit_from_scratch.ipynb` | Đã có | Cần GPU | Train DiT/action head từ scratch ít nhất 1 epoch |
-| 04 | `04_evaluate_test_split.ipynb` | Cần tạo | GPU khuyến nghị | Evaluation trên test split |
-| 05 | `05_ablation_study.ipynb` | Cần tạo | Cần GPU | Ablation hyperparameters / cấu trúc DiT |
+| 01A | `01_download_subsets_1_5.ipynb` | Đã chạy xong | Không cần | Download raw dataset gốc, hiện dùng cho subset 1-5 |
+| 01B | `01_download_subsets_6_10.ipynb` | Đã chạy xong một phần | Không cần | Download raw/data-meta cho subset nhóm 6-10, hiện dùng cho `CanToDrawer` |
+| 02 | `02_prepare_splits_and_features.ipynb` | Đã chạy xong | Không cần | Chuẩn bị train/test split và cache dữ liệu train-ready |
+| 03 | `03_train_dit_from_scratch.ipynb` | Đã chạy xong | Cần GPU | Train DiT/action head từ scratch ít nhất 1 epoch |
+| 04 | `04_evaluate_test_split.ipynb` | Đã có, chờ chạy | GPU khuyến nghị | Evaluation trên test split |
+| 05 | `05_ablation_study.ipynb` | Đã có, chờ chạy | Cần GPU | Ablation hyperparameters / cấu trúc DiT |
 | 06 | `06_collect_results_for_report.ipynb` | Optional | Không cần | Tổng hợp bảng, biểu đồ, file kết quả cho slide/báo cáo |
+
+## Trạng Thái Cập Nhật 10/06/2026
+
+Kết quả đã có trên Kaggle:
+
+- Notebook 01 đã tải đủ dữ liệu cần thiết cho 3 subset GR-1.
+- Notebook 02 đã chạy thành công trên output `notebook24d25a4217`, tạo `gr00t_prepared_3subsets`.
+- Notebook 03 đã chạy thành công trên output Notebook 02, tạo `gr00t_dit_runs`.
+- Notebook 04 và 05 đã được tạo trong repo, bước tiếp theo là chạy trên Kaggle.
+
+Kết quả Notebook 02 mới nhất:
+
+```text
+rows total: 6,192,174
+train samples: 4,952,021
+test samples: 1,240,153
+action_dim: 44
+state_dim: 44
+MAX_FRAMES_PER_EPISODE: None
+```
+
+Kết quả Notebook 03 mới nhất:
+
+```text
+model: MiniDiTActionHead
+params: 3,325,484
+epochs: 1
+steps: 4,835
+full_epoch_completed: true
+last logged loss: 0.11877
+epoch mean loss: 0.176141
+```
 
 ## Notebook 01 - Download Subsets
 

@@ -1,188 +1,69 @@
-# Tóm Tắt Bối Cảnh Và Tiến Độ CK - Isaac GR00T N1 / N1.6
+# Tom Tat Boi Canh Va Tien Do CK - Isaac GR00T N1 / N1.6
 
-Ngày cập nhật: 09/06/2026.
+Ngay cap nhat: 10/06/2026.
 
-File này dùng để chuyển ngữ cảnh sang repo/cuộc trò chuyện khác. Nội dung ghi lại yêu cầu đồ án, hướng tiếp cận đã thống nhất, các notebook đã tạo/sửa, dữ liệu đã tải, lỗi đã gặp, và trạng thái hiện tại.
+File nay dung de chuyen ngu canh sang repo/cuoc tro chuyen khac. Noi dung ghi lai muc tieu do an, scope du lieu, cac notebook da co, ket qua Kaggle da chay, va viec can lam tiep.
 
-## 1. Đề Tài Và Yêu Cầu CK
+## 1. De Tai Va Yeu Cau CK
 
-Đề tài nhóm: **Isaac GR00T: N1 through N1.6**.
+De tai nhom: **Isaac GR00T: N1 through N1.6**.
 
-Nhóm có 3 thành viên.
+Yeu cau thuc nghiem CK da thong nhat:
 
-Yêu cầu giảng viên cho phần thực nghiệm CK:
+1. **Implementation - muc Mini**
+   - Su dung dataset goc `nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim`.
+   - Train from scratch it nhat 1 epoch tren data goc.
+   - Do gioi han tai nguyen sinh vien, cach trinh bay hop ly la: frozen/pretrained VLM neu dung visual backbone, con phan DiT/action head khoi tao moi va train tu dau.
+   - Pipeline code hien tai la **mini state-action pipeline**: train action/DiT head tu scratch tren state/action features da cache, chua encode VLM image embedding that.
 
-1. **Implementation - Mức Mini**
-   - Train from scratch mô hình trên dataset gốc **GR00T-X-Embodiment-Sim** ít nhất 1 epoch.
-   - Do hạn chế tài nguyên sinh viên, giảng viên cho phép cách tiếp cận:
-     - VLM / vision-language backbone dùng pretrained và freeze.
-     - Phần **DiT/action head** khởi tạo mới và train từ đầu.
-   - Cần trình bày rõ: "from scratch" ở đây là train mới action module/DiT trong pipeline mini, không phải pretrain full VLA 2B/3B từ đầu.
+2. **Evaluation - Yes**
+   - Danh gia tren held-out test split.
+   - Can co MSE/MAE/RMSE hoac loss tren test split.
 
-2. **Evaluation - Mức Yes**
-   - Đánh giá trên **test split** của dataset.
-   - Cần có metric như MSE/MAE/loss trên test split.
+3. **Ablation Study - Yes**
+   - So sanh it nhat 3 cau hinh: baseline, learning rate thap hon, model shallow hon.
 
-3. **Ablation Study - Mức Yes**
-   - Chạy benchmark so sánh khi thay đổi hyperparameters hoặc thành phần cấu trúc.
-   - Ablation khả thi:
-     - learning rate: `1e-4` vs `5e-5`
-     - DiT layers: 4 vs 2
-     - hidden dim / batch size / optimizer nếu còn thời gian
-     - data scale: 3 subsets vs thêm subset nếu pipeline đã ổn
+## 2. Scope Du Lieu Da Chot
 
-## 2. Cách Hiểu Paper Và Hướng From Scratch
-
-Đã tham khảo paper gốc trong file `2503.14734v2.txt`.
-
-Ý chính:
-
-- GR00T N1 là Vision-Language-Action model gồm:
-  - VLM / Eagle-2 hoặc Cosmos-style backbone xử lý image + language.
-  - DiT/action module sinh action chunk bằng diffusion/flow matching.
-- Paper gốc dùng tài nguyên rất lớn, ví dụ hàng chục nghìn H100 GPU hours cho pretraining.
-- Vì vậy đồ án sinh viên không thể train full VLA từ đầu.
-
-Cách trình bày được chốt:
-
-```text
-Nhóm reproduce mini pipeline của GR00T:
-dùng pretrained/frozen VLM làm feature extractor,
-train mới DiT/action head trên GR00T-X-Embodiment-Sim.
-```
-
-## 3. Scope Dữ Liệu Đã Chốt
-
-Plan CK ban đầu trong `ck_action_plan.md` khá tham vọng:
-
-- 2-phase pipeline:
-  1. VLM encode features từ raw dataset.
-  2. Train DiT/action head trên encoded features.
-- Plan ban đầu nhắc đến khoảng 36 subsets hoặc 39 subsets tùy file hướng dẫn.
-
-Sau khi kiểm tra giới hạn Kaggle:
-
-- Không nên tải/encode 36-39 subset trong giai đoạn hiện tại.
-- Chiến thuật tốt nhất:
-
-```text
-chạy end-to-end với 3 subset trước
--> có train/eval/ablation đầy đủ
--> nếu ổn mới tải thêm subset và train lại hoặc fine-tune tiếp
-```
-
-Ba subset GR-1 đang dùng:
+Khong tai/encode 36-39 subset trong giai doan CK vi vuot tai nguyen Kaggle. Scope hop ly hien tai la chay end-to-end voi 3 subset GR-1:
 
 ```text
 gr1_arms_only.CanSort
-gr1_arms_waist.CupToDrawer
 gr1_arms_waist.CanToDrawer
+gr1_arms_waist.CupToDrawer
 ```
 
-Đánh giá hiện tại:
+Ket luan:
 
-- 3 subset là đủ để hoàn thành CK nếu pipeline đầy đủ.
-- Không nên tải thêm trước khi chạy xong notebook 02/03/04/05.
-- Nếu pipeline ổn, thêm subset sau có thể biến thành ablation "data scale".
+- 3 subset la du de hoan thanh plan CK neu co day du train/eval/ablation.
+- Khong can tai them subset truoc khi chay xong notebook 04 va 05.
+- Neu con thoi gian, co the them subset de lam ablation data scale, nhung khong bat buoc.
 
-## 4. Trạng Thái Dữ Liệu Đã Tải Trên Kaggle
+## 3. Trang Thai Du Lieu Da Tai Tren Kaggle
 
-Hiện đã tải xong các phần sau, theo minh chứng từ ảnh/output Kaggle:
-
-| Kaggle notebook | Nội dung tải | Thời gian | Ghi chú |
+| Kaggle notebook | Noi dung tai | Thoi gian | Ghi chu |
 |---|---|---:|---|
-| `notebook1700561abd` | `gr1_arms_only.CanSort` | 6 phút | Có output `gr00t_x_embodiment_sim` và `download_report_1_5.json` |
-| `notebookbcd29698a0` | `gr1_arms_waist.CupToDrawer` | 1 tiếng 40 phút | Full subset, có data/meta/videos |
-| `notebookb6c37dbbd0` | `gr1_arms_waist.CanToDrawer` | 24 phút | Chỉ tải `data/` + `meta/` |
-| `notebookd3f6a10db4` | Video supplement của `gr1_arms_waist.CanToDrawer` | 20 phút | Camera `observation.images.ego_view`, chunks `0,1,2` |
+| `notebook1700561abd` | `gr1_arms_only.CanSort` | 6 phut | Output co `download_report_1_5.json` |
+| `notebookbcd29698a0` | `gr1_arms_waist.CupToDrawer` | 1 gio 40 phut | Full subset |
+| `notebookb6c37dbbd0` | `gr1_arms_waist.CanToDrawer` data/meta | 24 phut | Khong tai full video |
+| `notebookd3f6a10db4` | Video supplement cho `gr1_arms_waist.CanToDrawer` | 20 phut | Camera `observation.images.ego_view`, chunks `0,1,2` |
 
-Kết luận dữ liệu:
+Ve `partial camera` va `meta/data`:
 
-- `CanSort`: đã có.
-- `CupToDrawer`: đã có full raw subset, gồm video.
-- `CanToDrawer`: đã có data/meta và có thêm video supplement giới hạn chunk 0,1,2.
-- Cách tải này phù hợp với giới hạn Kaggle hơn so với tải full video toàn bộ `CanToDrawer`.
+- `meta/data` la phan quan trong nhat cho pipeline hien tai vi chua parquet/state/action/episode metadata.
+- `partial camera` la video/image supplement. No huu ich neu can minh hoa visual/VLM/demo, nhung pipeline Notebook 02-05 hien tai khong bat buoc can full video tat ca camera.
+- Cach tai hien tai la hop ly cho CK: co data/meta day du de train/eval, co video dai dien de giai thich visual part, khong lam Kaggle tran disk.
 
-## 5. Notebook Đã Có / Đã Tạo
+## 4. Notebook Va Ket Qua Hien Tai
 
-### 5.1 `01_download_subsets_1_5.ipynb`
+### Notebook 01 - Download data
 
-Mục đích:
+Trang thai:
 
-- Download subset từ HuggingFace.
-- Tạo `download_report_1_5.json`.
-- CPU-only, không cần GPU.
+- Da chay thanh cong cac output download can thiet cho 3 subset.
+- CPU-only, khong can GPU.
 
-Lưu ý:
-
-- Pattern full subset `allow_patterns=f"{subset_name}/**"` có thể gây tràn disk với subset lớn.
-- Hiện đã dùng thành công cho một số subset, nhưng không nên tiếp tục tải nhiều full raw subset cùng lúc.
-
-### 5.2 `01_download_subsets_6_10.ipynb`
-
-Mục đích:
-
-- Download subset nhóm 6-10.
-- Tạo `download_report_6_10.json`.
-
-Lưu ý:
-
-- Notebook cũ full raw từng gây tràn disk với `CanToDrawer`.
-- Sau đó chiến lược đã đổi: `CanToDrawer` data/meta tải riêng, video supplement tải riêng.
-
-### 5.3 `01_supplement_can_to_drawer_videos.ipynb`
-
-Mục đích:
-
-- Bổ sung video cho `gr1_arms_waist.CanToDrawer`.
-- Không tải full video toàn subset.
-- Mặc định tải:
-
-```python
-camera_key = "observation.images.ego_view"
-CHUNK_IDS = [0, 1, 2]
-```
-
-Output:
-
-```text
-/kaggle/working/gr00t_x_embodiment_sim_video_supplement/
-/kaggle/working/video_supplement_report_CanToDrawer.json
-```
-
-Trạng thái:
-
-- Đã chạy trên Kaggle và tải xong video supplement theo ảnh minh chứng.
-
-### 5.4 `02_prepare_splits_and_features.ipynb`
-
-Mục đích:
-
-- Đọc 3 subset đã tải.
-- Scan `meta/`, `data/`, `videos/`.
-- Đọc parquet.
-- Detect episode/frame/action/state columns.
-- Split train/test theo episode.
-- Lưu cache `.npy`, `.parquet`, `.json` cho notebook train.
-
-Trạng thái hiện tại:
-
-- **Đã tạo file notebook.**
-- **Đã sửa để phù hợp với cách tải hiện tại của 4 Kaggle outputs.**
-- **Chưa chạy trên Kaggle.**
-
-Notebook 2 hiện đã hỗ trợ:
-
-- Không còn giả định 3 subset nằm chung một `RAW_ROOT`.
-- Tự scan nhiều Kaggle input bằng `RAW_ROOTS`.
-- Tạo `SUBSET_SOURCES` để mỗi subset có thể lấy:
-  - `data/meta` từ một output dataset;
-  - `videos` từ output dataset khác.
-- Ghi minh chứng tải vào:
-  - `dataset_scan_report.json`
-  - `prepare_report.json`
-
-Khi chạy notebook 2 trên Kaggle, cần Add Input đủ 4 output datasets:
+Output dung lam Kaggle input cho Notebook 02:
 
 ```text
 notebook1700561abd
@@ -191,236 +72,268 @@ notebookb6c37dbbd0
 notebookd3f6a10db4
 ```
 
-Notebook 2 **không cần GPU**. Để Kaggle:
+### Notebook 02 - Prepare splits/features
+
+File chinh:
 
 ```text
-Accelerator: None
+notebook/02_split/02_prepare_splits_and_features.ipynb
 ```
 
-Nên chạy thử với:
-
-```python
-MAX_FRAMES_PER_EPISODE = 200
-```
-
-Nếu chạy ổn, có thể đổi thành:
-
-```python
-MAX_FRAMES_PER_EPISODE = None
-```
-
-Output mong đợi của notebook 2:
+Kaggle run moi nhat:
 
 ```text
-/kaggle/working/gr00t_prepared_3subsets/
-  dataset_scan_report.json
-  prepare_report.json
-  splits_train_episodes.json
-  splits_test_episodes.json
-  train_samples.parquet
-  test_samples.parquet
-  actions_train.npy
-  actions_test.npy
-  sample_index.parquet
-  states_train.npy      # nếu đọc được state
-  states_test.npy       # nếu đọc được state
+notebook24d25a4217.ipynb
 ```
 
-### 5.5 `notebook_creation_plan.md`
+Trang thai: **da chay xong va on de lam input cho Notebook 03/04/05**.
 
-Mục đích:
-
-- Liệt kê toàn bộ notebook cần tạo cho CK.
-- Ghi mục tiêu từng notebook.
-- Mapping từng notebook với các phần của `ck_action_plan.md`.
-
-Các notebook trong plan:
+Ket qua quan trong:
 
 ```text
-01_download_subsets_*.ipynb
-02_prepare_splits_and_features.ipynb
-03_train_dit_from_scratch.ipynb
-04_evaluate_test_split.ipynb
-05_ablation_study.ipynb
-06_collect_results_for_report.ipynb   # optional
+output_dir: gr00t_prepared_3subsets
+MAX_FRAMES_PER_EPISODE: null
+rows total: 6,192,174
+train samples: 4,952,021
+test samples: 1,240,153
+action_dim: 44
+state_dim: 44
+split: episode-level 80/20
 ```
 
-## 6. Lỗi Đã Gặp Và Cách Xử Lý
+Rows theo subset:
 
-### 6.1 HuggingFace 403 Với Gated Model
+| Subset | Rows | Episodes |
+|---|---:|---:|
+| `gr1_arms_only.CanSort` | 316,878 | 1,000 |
+| `gr1_arms_waist.CanToDrawer` | 3,210,426 | 10,107 |
+| `gr1_arms_waist.CupToDrawer` | 2,664,870 | 10,036 |
 
-Lỗi:
+Output Notebook 02:
 
 ```text
-403 Forbidden: Please enable access to public gated repositories...
-```
-
-Nguyên nhân:
-
-- Token HuggingFace chưa có quyền public gated repos hoặc chưa accept model/dataset gated.
-
-Cách xử lý:
-
-- Tạo HF token mới.
-- Bật permission read public gated repos.
-- Accept model/dataset cần dùng.
-- Lưu token vào Kaggle Secret `HF_TOKEN`.
-
-### 6.2 Kaggle Save Version Lỗi Notebook Source > 1MB
-
-Lỗi:
-
-```text
-The kernel source must be less than 1 megabytes in size.
-```
-
-Nguyên nhân:
-
-- Notebook cũ chứa output/log/papermill metadata quá lớn.
-
-Cách xử lý:
-
-- Clear outputs.
-- Reset metadata.
-- Tạo notebook sạch, ít cell.
-
-### 6.3 HuggingFace HTTP 429 Rate Limit
-
-Nguyên nhân:
-
-- `snapshot_download` tạo quá nhiều request.
-
-Cách xử lý:
-
-- Dùng `max_workers=2` hoặc `1`.
-- Tránh chạy nhiều notebook download cùng lúc bằng cùng token.
-
-### 6.4 Kaggle Tràn Disk Khi Tải Full Raw Subset
-
-Log cũ cho thấy `CanToDrawer` bị tràn disk khi tải full raw:
-
-```text
-OSError: [Errno 28] No space left on device
-videos/chunk-008/observation.images.ego_view
-```
-
-Kết luận:
-
-- Không phải lỗi token hay cú pháp.
-- Nguyên nhân là tải full raw subset gồm nhiều video/chunk/camera.
-
-Cách xử lý đã chọn:
-
-```text
-CanToDrawer:
-  - tải data/meta riêng
-  - tải video supplement riêng, chỉ camera ego_view, chunk 0,1,2
-```
-
-## 7. Có Cần Video Không?
-
-Dựa vào `ck_action_plan.md`:
-
-- Nếu làm đúng tinh thần 2-phase pipeline "VLM encode features -> train DiT", thì cần ảnh/video frame cho VLM.
-- Nhưng không cần tải full video cho mọi subset.
-
-Chiến lược hiện tại:
-
-```text
-3 subset: có data/meta để train/eval action pipeline
-CupToDrawer: có full video
-CanToDrawer: có video supplement chunks 0,1,2
-CanSort: có dữ liệu từ notebook download, cần notebook 2 scan lại xác nhận số video/parquet
-```
-
-Điều này đủ hợp lý cho CK:
-
-- Dùng parquet/action/state cho pipeline train/eval.
-- Có video representative cho phần visual/VLM/demo.
-- Không làm Kaggle tràn disk.
-
-## 8. Tiến Độ Hiện Tại
-
-Đã xong:
-
-- Phân tích yêu cầu CK.
-- Chốt cách hiểu from scratch: train DiT/action head từ đầu, VLM pretrained/frozen.
-- Chốt chiến lược 3 subset trước.
-- Tải xong dữ liệu theo 4 Kaggle notebooks như mục 4.
-- Tạo `notebook_creation_plan.md`.
-- Tạo và sửa `02_prepare_splits_and_features.ipynb`.
-- Tạo `01_supplement_can_to_drawer_videos.ipynb`.
-- Tạo `teacher_audio_notes.md`.
-
-Chưa xong:
-
-- **Chưa chạy notebook 2 trên Kaggle.**
-- Chưa tạo notebook 3 train DiT.
-- Chưa train 1 epoch.
-- Chưa evaluate test split.
-- Chưa chạy ablation.
-
-Việc cần làm ngay tiếp theo:
-
-1. Mở `02_prepare_splits_and_features.ipynb` trên Kaggle.
-2. Add Input đủ 4 output datasets:
-
-```text
-notebook1700561abd
-notebookbcd29698a0
-notebookb6c37dbbd0
-notebookd3f6a10db4
-```
-
-3. Để Accelerator: `None`.
-4. Chạy với:
-
-```python
-MAX_FRAMES_PER_EPISODE = 200
-```
-
-5. Kiểm tra output:
-
-```text
-prepare_report.json
-dataset_scan_report.json
 actions_train.npy
 actions_test.npy
+states_train.npy
+states_test.npy
 train_samples.parquet
 test_samples.parquet
+sample_index.parquet
+splits_train_episodes.json
+splits_test_episodes.json
+dataset_scan_report.json
+prepare_report.json
 ```
 
-6. Nếu notebook 2 chạy ổn, Save Version output thành Kaggle Dataset.
-7. Sau đó tạo/chạy notebook 3: `03_train_dit_from_scratch.ipynb`.
+Ghi chu ky thuat:
 
-## 9. File Quan Trọng Trong Repo
+- Notebook 02 da duoc sua thanh pipeline that, khong con test-only.
+- `MAX_FRAMES_PER_EPISODE = None`, tuc la dung full frame thay vi cat 200 frame/episode.
+- Action/state column dung la `action` va `observation.state`.
+- Cac cot annotation text bi bo qua dung cach, khong bi nham thanh action numeric.
+
+### Notebook 03 - Train DiT/action head from scratch
+
+File da tao:
 
 ```text
-ck_action_plan.md
-ck_context_summary.md
-notebook_creation_plan.md
-teacher_audio_notes.md
-01_download_subsets_1_5.ipynb
-01_download_subsets_6_10.ipynb
-01_supplement_can_to_drawer_videos.ipynb
-02_prepare_splits_and_features.ipynb
+notebook/03_train/03_train_dit_from_scratch.ipynb
 ```
 
-## 10. Prompt Gợi Ý Khi Chuyển Sang Repo/Cuộc Trò Chuyện Khác
+Kaggle run da chay:
 
 ```text
-Chúng tôi đang làm CK Isaac GR00T N1/N1.6.
-Yêu cầu: train from scratch ít nhất 1 epoch trên GR00T-X-Embodiment-Sim, evaluation trên test split, ablation study.
-Giảng viên cho phép dùng pretrained/frozen VLM và train DiT/action head từ scratch.
-
-Hiện đã tải xong 3 subset GR-1:
-- CanSort từ notebook1700561abd
-- CupToDrawer từ notebookbcd29698a0
-- CanToDrawer data/meta từ notebookb6c37dbbd0
-- CanToDrawer video supplement chunks 0,1,2 từ notebookd3f6a10db4
-
-Đã tạo và sửa notebook 2: 02_prepare_splits_and_features.ipynb.
-Notebook 2 hiện chưa chạy.
-Cần chạy notebook 2 trên Kaggle với Accelerator None, Add Input đủ 4 datasets, MAX_FRAMES_PER_EPISODE=200.
-Sau đó tạo notebook 3 để train DiT/action head from scratch.
+notebook91f64cc351.ipynb
 ```
+
+Trang thai: **da train xong 1 epoch, dat yeu cau Implementation Mini**.
+
+Ket qua chinh:
+
+```text
+GPU: Tesla T4
+input: notebook24d25a4217/gr00t_prepared_3subsets
+model: MiniDiTActionHead
+params: 3,325,484
+hidden_dim: 256
+num_layers: 4
+batch_size: 1024
+epochs: 1
+steps: 4,835
+full_epoch_completed: true
+elapsed: about 108 sec
+first logged loss: 2.02877
+last logged loss: 0.11877
+epoch mean loss: 0.176141
+```
+
+Output Notebook 03:
+
+```text
+gr00t_dit_runs/
+  config.json
+  train_log.csv
+  loss_curve.png
+  checkpoint_last.pt
+  train_summary.json
+```
+
+Danh gia:
+
+- Notebook 03 du manh de chung minh train from scratch action/DiT head tren dataset goc.
+- Ket qua loss giam ro va full epoch completed, co the tiep tuc sang evaluation.
+
+### Notebook 04 - Evaluate test split
+
+File da tao:
+
+```text
+notebook/04_eval/04_evaluate_test_split.ipynb
+```
+
+Trang thai: **da tao, chua co thong tin user da chay tren Kaggle**.
+
+Input can add tren Kaggle:
+
+```text
+notebook24d25a4217/gr00t_prepared_3subsets
+notebook91f64cc351/gr00t_dit_runs
+```
+
+Output mong doi:
+
+```text
+gr00t_eval_results/
+  eval_summary.json
+  eval_metrics.csv
+  per_subset_metrics.csv
+  prediction_vs_ground_truth.png
+```
+
+Vai tro:
+
+- Day la notebook chung minh **Evaluation Yes**.
+- Sau khi chay xong Notebook 04 moi co bang MSE/MAE/RMSE tren test split de dua vao bao cao.
+
+### Notebook 05 - Ablation study
+
+File da tao:
+
+```text
+notebook/05_ablation/05_ablation_study.ipynb
+```
+
+Trang thai: **da tao, chua co thong tin user da chay tren Kaggle**.
+
+Input can add tren Kaggle:
+
+```text
+notebook24d25a4217/gr00t_prepared_3subsets
+```
+
+Mac dinh chay 3 cau hinh:
+
+| Run | Learning rate | Layers | Hidden dim |
+|---|---:|---:|---:|
+| `baseline` | `1e-4` | 4 | 256 |
+| `lr_low` | `5e-5` | 4 | 256 |
+| `shallow` | `1e-4` | 2 | 256 |
+
+Output mong doi:
+
+```text
+gr00t_ablation_results/
+  ablation_summary.csv
+  ablation_summary.json
+  ablation_bar_chart.png
+  ablation_per_subset_metrics.csv
+  run_baseline/
+  run_lr_low/
+  run_shallow/
+```
+
+Vai tro:
+
+- Day la notebook chung minh **Ablation Study Yes**.
+- Sau khi chay xong Notebook 05, phan thuc nghiem cot loi cua plan CK gan nhu hoan tat.
+
+## 5. Mapping Phase
+
+Theo pipeline 2 phase da dieu chinh cho scope CK:
+
+### Phase 1 - Data preparation / train-ready features
+
+Notebook thuoc Phase 1:
+
+```text
+Notebook 01: download 3 subset GR-1
+Notebook 02: prepare train/test split, cache state/action features
+```
+
+Ghi chu trung thuc khi viet bao cao:
+
+- Phase 1 hien tai la prepare state/action train-ready cache.
+- Neu slide noi "VLM encode image features" thi can sua wording thanh "prepare train-ready features" hoac bo sung notebook encode VLM that.
+
+### Phase 2 - Train, evaluate, ablate action model
+
+Notebook thuoc Phase 2:
+
+```text
+Notebook 03: train MiniDiT/action head from scratch
+Notebook 04: evaluate on held-out test split
+Notebook 05: ablation study
+```
+
+### Phase 3 optional - Report packaging
+
+```text
+Notebook 06: collect results for report/slides
+```
+
+Notebook 06 khong bat buoc de dat yeu cau CK, nhung huu ich neu muon gom bang/anh tu dong.
+
+## 6. Phan Tram Hoan Thanh
+
+Trang thai thuc te tai ngay 10/06/2026:
+
+- Notebook 01: da chay xong.
+- Notebook 02: da chay xong va output tot.
+- Notebook 03: da chay xong 1 epoch va output tot.
+- Notebook 04: da tao, can chay tren Kaggle.
+- Notebook 05: da tao, can chay tren Kaggle.
+
+Uoc luong hien tai:
+
+```text
+Hien tai: khoang 65-70% plan CK thuc nghiem.
+```
+
+Neu chay xong thanh cong ca 5 notebook 01-05:
+
+```text
+Khoang 90-95% plan CK.
+```
+
+Phan con lai sau Notebook 01-05:
+
+- Gom bang/anh vao slide va report.
+- Viet nhan xet evaluation/ablation.
+- Giai thich gioi han: mini pipeline, train action head tu scratch, khong pretrain full VLA.
+- Optional: tao Notebook 06 de collect report assets.
+
+## 7. Viec Can Lam Tiep
+
+Thu tu nen lam tiep:
+
+1. Chay `04_evaluate_test_split.ipynb` tren Kaggle voi input Notebook 02 + Notebook 03.
+2. Kiem tra `eval_summary.json`, `eval_metrics.csv`, `per_subset_metrics.csv`.
+3. Chay `05_ablation_study.ipynb` tren Kaggle voi input Notebook 02.
+4. Kiem tra `ablation_summary.csv`, `ablation_bar_chart.png`.
+5. Dua cac bang/anh vao bao cao CK.
+
+Neu can tiet kiem GPU:
+
+- Notebook 04 chay truoc vi nhanh va bat buoc cho Evaluation.
+- Notebook 05 co the chay sau; neu thoi gian it, van nen chay du 3 config mac dinh de co ablation hop le.
+
