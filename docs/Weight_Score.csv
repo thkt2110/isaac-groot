@@ -1,0 +1,47 @@
+,,,Methodology,,,Benchmark,,
+No.,Topics,Starting Materials,Formulation,Method,Impact,Implement,Evaluation,Ablation
+1,Core Vector Regression for Very Large Regression Problems,icml.cc/Conferences/2005/proceedings/papers/115_CoreVector_TsangEtAl.pdf,10%,35%,5%,20%,20%,10%
+2,KerJEPA,https://arxiv.org/abs/2512.19605,10%,40%,5%,15%,20%,10%
+3,V-JEPA,V-JEPA: The next step toward advanced machine intelligence,10%,40%,10%,15%,15%,10%
+4,Graph-JEPA,[2309.16014] Graph-level Representation Learning with Joint-Embedding Predictive Architectures,10%,45%,5%,20%,15%,5%
+5,LeJEPA,https://www.turingpost.com/p/lejepa,10%,40%,5%,15%,20%,10%
+6,3D-JEPA,Meta FAIR | Locate 3D,10%,50%,5%,15%,15%,5%
+7,JEPA for RL,esann.org/sites/default/files/proceedings/2025/ES2025-19.pdf,10%,50%,5%,15%,15%,5%
+8,Microsoft VITRA,https://microsoft.github.io/VITRA/,10%,40%,5%,15%,20%,10%
+9,Isaac GR00T: N1 through N1.6,https://arxiv.org/abs/2503.14734,10%,35%,10%,15%,20%,10%
+10,LAPA,https://latentactionpretraining.github.io/,10%,50%,5%,15%,15%,5%
+11,Theoretical HyperNetworks,"M. Forgione, A. Chakrabarty, D. Piga, M. Rufolo, and A. Bemporad, “Manifold Meta-Learning for Reduced-Complexity Neural System Identification,” arXiv preprint arXiv:2504.11811, Apr. 2025.",10%,60%,5%,10%,10%,5%
+12,VA-pi,https://huggingface.co/papers/2512.19680,10%,50%,5%,15%,15%,5%
+13,Internal RL,https://huggingface.co/papers/2512.20605,10%,60%,5%,10%,10%,5%
+14,Spatia,https://huggingface.co/papers/2512.15716,10%,50%,5%,15%,15%,5%
+15,VidFM 3D Awareness Probe,https://huggingface.co/papers/2512.19949,10%,45%,5%,15%,15%,10%
+16,LIVR,https://huggingface.co/papers/2512.21218,10%,50%,5%,15%,15%,5%
+17,HACRL,https://huggingface.co/papers/2603.02604,10%,45%,5%,15%,15%,10%
+18,InfinityStory,https://huggingface.co/papers/2603.03646,10%,55%,5%,10%,15%,5%
+19,Proact-VL,https://huggingface.co/papers/2603.03447,10%,50%,5%,15%,15%,5%
+20,G-OPD,https://huggingface.co/papers/2602.12125,10%,45%,5%,20%,15%,5%
+21,Relational Graph Transformer,https://cs.stanford.edu/people/jure/pubs/relational-graph-transformer-25.pdf,10%,45%,5%,15%,15%,10%
+22,Relational Transformer,https://cs.stanford.edu/people/jure/pubs/relational-transformer-25.pdf,10%,50%,5%,15%,15%,5%
+23,Simple Evolutionary Algorithm,https://dl.acm.org/doi/10.1145/3638530.3664112,10%,35%,5%,20%,20%,10%
+24,PhysBrain,https://huggingface.co/papers/2512.16793,10%,40%,5%,20%,20%,5%
+25,mHC,https://arxiv.org/pdf/2512.24880,10%,45%,10%,15%,15%,5%
+26,GNN-MoE,https://arxiv.org/pdf/2511.04008,10%,45%,5%,15%,15%,10%
+27,RISE,https://huggingface.co/papers/2602.11075,10%,35%,5%,20%,20%,10%
+28,LangForce,https://arxiv.org/pdf/2601.15197,10%,55%,5%,15%,10%,5%
+29,Vision Language Action Instruction Tuning: From Understanding to Manipulation,https://www.google.com/search?q=https://arxiv.org/pdf/2507.17520v2,10%,55%,5%,15%,10%,5%
+30,World Action Models,https://arxiv.org/pdf/2602.15922,10%,45%,10%,15%,15%,5%
+31,Seed2Scale,https://arxiv.org/pdf/2603.08260,10%,50%,5%,15%,15%,5%
+32,Humanoid World Models,https://arxiv.org/pdf/2506.01182,10%,40%,10%,20%,15%,5%
+33,Ego Vision World Model for Humanoid Contact Planning,https://arxiv.org/pdf/2510.11682,10%,45%,5%,20%,15%,5%
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,35%,60%,,,
+,"NOTE 1: Requirements with ""No"" but associated non-zero points means the teams working on those topics AUTOMATICALLY get these non-zero points",,,Method: Grade Requirements,,,,
+,"NOTE 2: Any successful improvement over the listed methods as well as their competitors, RE-PRODUCED with implemented evaluations, automatically gives the team 100% points",,,30%,Understand the core idea of the method and can re-state with your own words,,,
+,,,,35%,Understand the core idea of the method and can re-state with your own words + drawing figures,,,
+,,,,40%,Understand the core idea of the method and can explain with your own mathematical intuition (write your own equations + figures),,,
+,,,,45%,Understand the core idea of the method and can explain the meaning of mathematics given in the method,,,
+,,,,50%,Fully understand the proposed idea and can explain the mathematical formulation of the given method,,,
+,,,,55%,Fully understand the proposed idea of the method and can explain the reasonining/derivation behind the mathematical formulations,,,
+,,,,60%,"Fully understand the proposed idea of the method and create a video that specifically explain the full method, using your own equations, figures, or derivations",,,

@@ -1,0 +1,69 @@
+Successfully ran in 6553.7s
+Accelerator
+None
+
+Environment
+Latest Container Image
+
+Output
+19.73 GB
+
+Time
+#
+Log Message
+8.4s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.4s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.4s	3	0.00s - to python to disable frozen modules.
+8.4s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.2s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.2s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.2s	7	0.00s - to python to disable frozen modules.
+9.2s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+17.7s	9	thkt2110
+17.7s	10	Target subsets:
+17.7s	11	  1. gr1_arms_waist.CupToDrawer
+17.7s	12	
+17.7s	13	Local output: /kaggle/working/gr00t_x_embodiment_sim
+17.7s	14	Report output: /kaggle/working/download_report_1_5.json
+17.9s	15	
+17.9s	16	================================================================================
+17.9s	17	Downloading subset: gr1_arms_waist.CupToDrawer
+6525.7s	18	Downloaded to: /kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CupToDrawer
+6526.1s	19	Subset size: 18.37 GB
+6540.9s	20	
+6540.9s	21	Download step finished.
+6541.4s	22	Filesystem      Size  Used Avail Use% Mounted on
+6541.4s	23	/dev/loop1       20G   19G  1.1G  95% /kaggle/working
+6541.6s	24	19G	/kaggle/working/gr00t_x_embodiment_sim
+6541.6s	25	{
+6541.6s	26	  "repo_id": "nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+6541.6s	27	  "local_dir": "/kaggle/working/gr00t_x_embodiment_sim",
+6541.6s	28	  "subsets": [
+6541.6s	29	    {
+6541.6s	30	      "name": "gr1_arms_waist.CupToDrawer",
+6541.6s	31	      "path": "/kaggle/working/gr00t_x_embodiment_sim/gr1_arms_waist.CupToDrawer",
+6541.6s	32	      "exists": true,
+6541.6s	33	      "size_gb": 18.374,
+6541.6s	34	      "has_data_dir": true,
+6541.6s	35	      "has_videos_dir": true,
+6541.6s	36	      "has_meta_dir": true,
+6541.6s	37	      "num_parquet_files": 10036,
+6541.6s	38	      "num_video_files": 10036
+6541.6s	39	    }
+6541.6s	40	  ]
+6541.6s	41	}
+6541.6s	42	
+6541.6s	43	Disk usage:
+6541.6s	44	Filesystem      Size  Used Avail Use% Mounted on
+6541.6s	45	/dev/loop1       20G   19G  1.1G  95% /kaggle/working
+6541.6s	46	19G	/kaggle/working/gr00t_x_embodiment_sim
+6541.6s	47	
+6541.6s	48	Saved report to: /kaggle/working/download_report_1_5.json
+6546.4s	49	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+6546.4s	50	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+6546.6s	51	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+6546.7s	52	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+6547.5s	53	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+6548.0s	54	[NbConvertApp] Writing 32866 bytes to __notebook__.ipynb
+6551.4s	55	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+6552.7s	56	[NbConvertApp] Writing 310315 bytes to __results__.html
