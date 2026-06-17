@@ -5,7 +5,7 @@
     "subset": "gr1_arms_waist.PlaceMilkToMicrowave",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 2,
@@ -13,7 +13,7 @@
     "subset": "gr1_arms_waist.PotatoToMicrowave",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 3,
@@ -21,7 +21,7 @@
     "subset": "gr1_arms_waist.PlateToBowl",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 4,
@@ -29,7 +29,7 @@
     "subset": "gr1_arms_waist.PlateToPlate",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 5,
@@ -37,7 +37,7 @@
     "subset": "gr1_arms_waist.TrayToPlate",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 6,
@@ -45,7 +45,7 @@
     "subset": "gr1_arms_waist.WineToCabinet",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 7,
@@ -53,7 +53,7 @@
     "subset": "gr1_arms_waist.CuttingboardToBasket",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 8,
@@ -61,7 +61,7 @@
     "subset": "gr1_arms_waist.CuttingboardToPan",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 9,
@@ -69,7 +69,7 @@
     "subset": "gr1_arms_waist.PlaceBottleToCabinet",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 10,
@@ -77,7 +77,7 @@
     "subset": "gr1_arms_waist.PlacematToBowl",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 11,
@@ -85,7 +85,7 @@
     "subset": "gr1_arms_waist.TrayToPot",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 12,
@@ -93,7 +93,7 @@
     "subset": "gr1_arms_waist.TrayToTieredShelf",
     "priority_group": "p1_gr1_safe",
     "pipeline_safe_for_notebook02": true,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 13,
@@ -101,7 +101,7 @@
     "subset": "gr1_full_upper_body.Coffee",
     "priority_group": "p2_gr1_experimental",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 14,
@@ -109,7 +109,7 @@
     "subset": "gr1_full_upper_body.Pouring",
     "priority_group": "p2_gr1_experimental",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 15,
@@ -117,7 +117,7 @@
     "subset": "gr1_unified.PnPCanToDrawerClose_GR1ArmsAndWaistFourierHands_1000",
     "priority_group": "p2_gr1_experimental",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 16,
@@ -125,7 +125,7 @@
     "subset": "gr1_unified.PnPCupToDrawerClose_GR1ArmsAndWaistFourierHands_1000",
     "priority_group": "p2_gr1_experimental",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 17,
@@ -133,7 +133,7 @@
     "subset": "gr1_unified.PnPBottleToCabinetClose_GR1ArmsAndWaistFourierHands_1000",
     "priority_group": "p2_gr1_experimental",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 18,
@@ -141,7 +141,7 @@
     "subset": "bimanual_panda_gripper.Threading",
     "priority_group": "p3_cross_embodiment",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 19,
@@ -149,7 +149,7 @@
     "subset": "bimanual_panda_gripper.Transport",
     "priority_group": "p3_cross_embodiment",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 20,
@@ -157,7 +157,7 @@
     "subset": "single_panda_gripper.PnPCounterToCab",
     "priority_group": "p3_cross_embodiment",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 21,
@@ -165,7 +165,7 @@
     "subset": "single_panda_gripper.OpenDrawer",
     "priority_group": "p3_cross_embodiment",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 22,
@@ -173,7 +173,7 @@
     "subset": "single_panda_gripper.CoffeeServeMug",
     "priority_group": "p3_cross_embodiment",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 23,
@@ -181,7 +181,7 @@
     "subset": "sim_behavior_r1_pro.task-0001_picking_up_trash",
     "priority_group": "p3_cross_embodiment",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 24,
@@ -189,7 +189,7 @@
     "subset": "sim_behavior_r1_pro.task-0020_sorting_vegetables",
     "priority_group": "p3_cross_embodiment",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   },
   {
     "order": 25,
@@ -197,6 +197,6 @@
     "subset": "unitree_g1.LMPnPAppleToPlateDC",
     "priority_group": "p3_cross_embodiment",
     "pipeline_safe_for_notebook02": false,
-    "default_download_mode": "full_subset"
+    "default_download_mode": "data_meta_ego_chunks"
   }
 ]

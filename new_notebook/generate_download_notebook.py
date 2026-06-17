@@ -89,12 +89,13 @@ def make_notebook(subset, pipeline_safe, priority):
     report_safe = safe_filename(subset)
     return [
         md(f"""
-        # 01 - Download Full Subset: `{subset}`
+        # 01 - Download Partial Safe Subset: `{subset}`
 
         Notebook này chỉ tải **1 subset** để tránh một notebook ôm quá nhiều data và làm đầy disk Kaggle.
 
-        - Download mode mặc định: `full_subset`, tức là tải `meta/`, `data/`, và toàn bộ `videos/`.
-        - Nếu hết disk, sửa riêng notebook này sang `DOWNLOAD_MODE = "data_meta_ego_chunks"` hoặc `data_meta_only`.
+        - Download mode mặc định: `data_meta_ego_chunks`, tức là tải `meta/`, `data/`, và chỉ video `ego_view` ở các chunk được chọn.
+        - Không tải full video mặc định vì subset video rất lớn và dễ tràn disk Kaggle.
+        - Nếu hết disk, sửa riêng notebook này sang `DOWNLOAD_MODE = "data_meta_only"`.
         - `PIPELINE_SAFE_FOR_NOTEBOOK02 = {pipeline_safe}`.
 
         Gợi ý vận hành:
@@ -124,8 +125,8 @@ def make_notebook(subset, pipeline_safe, priority):
         LOCAL_DIR = Path("/kaggle/working/gr00t_x_embodiment_sim")
         LOCAL_DIR.mkdir(parents=True, exist_ok=True)
 
-        # Bạn muốn tải full video trước. Nếu disk không đủ, chỉ cần sửa dòng này trong notebook subset bị lỗi.
-        DOWNLOAD_MODE = "full_subset"  # "full_subset" | "data_meta_ego_chunks" | "data_meta_only"
+        # Disk Kaggle không đủ cho full video; mặc định tải meta/data + một ít video ego_view để đủ chạy VLM encode.
+        DOWNLOAD_MODE = "data_meta_ego_chunks"  # "full_subset" | "data_meta_ego_chunks" | "data_meta_only"
         CAMERA_KEY = "observation.images.ego_view"
         VIDEO_CHUNKS = [0, 1, 2]
         CLEAN_HF_CACHE_AFTER_DOWNLOAD = True
@@ -293,6 +294,12 @@ def make_notebook(subset, pipeline_safe, priority):
         VIDEO_CHUNKS = [0, 1, 2]
         ```
 
+        Nếu vẫn đầy disk, giảm video xuống:
+
+        ```python
+        VIDEO_CHUNKS = [0]
+        ```
+
         Nếu vẫn đầy disk:
 
         ```python
@@ -314,7 +321,7 @@ for idx, (subset, pipeline_safe, priority) in enumerate(DOWNLOAD_TARGETS, 1):
         "subset": subset,
         "priority_group": priority,
         "pipeline_safe_for_notebook02": pipeline_safe,
-        "default_download_mode": "full_subset",
+        "default_download_mode": "data_meta_ego_chunks",
     })
 
 write(
@@ -337,6 +344,6 @@ write(
 
 (OUT / "01_download").mkdir(parents=True, exist_ok=True)
 (OUT / "01_download" / "download_full_subset_index.json").write_text(json.dumps(index_rows, indent=2), encoding="utf-8")
-print("Generated full-subset download notebooks:", len(index_rows))
+print("Generated partial-safe download notebooks:", len(index_rows))
 for row in index_rows:
     print(row["notebook"])

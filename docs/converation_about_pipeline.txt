@@ -1,0 +1,27 @@
+Dạ em chào thầy
+
+Chúng em là nhóm thực hiện đề tài "Isaac GR00T: N1 through N1.6" cho bài tập lớn Cuối kỳ môn Học máy.
+
+Ở  phần thực nghiệm ở mức "Implement (Mức Mini): Tự train từ đầu (from scratch) mô hình trên dataset gốc trong ít nhất 1 epoch", nhóm chúng em đã tìm hiểu mã nguồn và paper chính thức của NVIDIA. Chúng em nhận thấy mô hình gốc rất lớn (2.2B parameters) và được huấn luyện qua 2 giai đoạn:
+
+Pre-training: Huấn luyện từ đầu (from scratch) cả VLM backbone và DiT head trên cluster 1024 GPU H100 (tốn ~50,000 GPU-hours).
+Post-training (Fine-tuning): Fine-tune checkpoint đã pre-train trên các dataset của từng robot cụ thể (unfreeze vision encoder + DiT head).
+Do giới hạn tài nguyên tính toán của sinh viên (sử dụng GPU miễn phí trên Kaggle), nhóm em xin phép tham khảo ý kiến Thầy/Cô về cách định nghĩa hướng đi "train from scratch / mini" nào dưới đây sẽ phù hợp với yêu cầu của môn học nhất ạ:
+
+Hướng 1: Post-training (Fine-tuning) checkpoint pre-trained: Nhóm sẽ load checkpoint GR00T-N1.6-3B đã pre-train của NVIDIA, sau đó tiến hành post-training (unfreeze vision encoder và DiT head để huấn luyện) trên một subset của dataset gốc GR00T-X-Embodiment-Sim (ví dụ: tác vụ gr1_arms_only.CanSort). Đây là cách làm giống hệt như quy trình huấn luyện tác vụ mới trong paper của NVIDIA.
+Hướng 2: Khởi tạo lại một "Mini-model" hoàn toàn random để train từ đầu: Nhóm sẽ scale down tối đa kích thước mạng DiT (ví dụ: giảm số layers từ 32 xuống 4, giảm hidden size), đóng băng (freeze) hoàn toàn VLM backbone làm bộ trích xuất đặc trưng để giảm tải, và chỉ khởi tạo ngẫu nhiên (random init) rồi train từ đầu (from scratch) phần DiT head siêu nhỏ này trên dataset.
+
+Em xin cảm ơn thầy ạ
+hướng 2 thì cái system 2 nó sẽ hơi dở do freeze hoàn toàn và ko train cái bước suy luận đó
+do nhóm e ko hiêu train from scratch thì có phải train full giống họ hay ko
+vì họ train tới 50000h với cụm 1024 H100
+dataset cũng tới 880M frame nên e thấy ko train full nổi như họ nên e hỏi lại thầy load pretraining của họ rồi post training như họ làm thì có đúng yêu cầu đồ án ko ạ
+Chào em, trong 2 hướng mà nhóm đưa ra thì hướng 2 là gần nhất đối với yêu cầu đề bài nhé. Tuy vậy, như em đã nói thì scale nhỏ model sẽ rất khó đạt đến performance như người ta. Nhưng thôi thì cũng sắp tới deadline nên nhóm cứ scale nhỏ model rồi train tạm nhé. Về mặt kỹ thuật thì có một số cách để train tốt trên các cấu hình máy yếu như sử dụng batch size kết hợp accumulated gradient, sử dụng một số thuật toán optimizer tối ưu như Apollo thay vì Adam và train với mixed precision weight
+Do khối lượng data lớn nên nếu được thì nhóm có thể tách thành 2 pha là encoding và training, khi đó VLM freeze chạy rút trích feature một lượt lưu tạm vào storage rồi DiT train trên các features này thôi
+Như vậy sẽ tiện hơn so với mỗi lần chạy phải bỏ gpu ra cho VLM đồng thời, giảm bớt yêu cầu vram thì sẽ duy trì kích thước DiT head tốt hơn. Nhưng nhóm vẫn sẽ phải pretrain và posttrain cái DiT head này
+dạ em hiểu rồi ạ
+em cảm ơn thầy nhiều ạ
+về phần dataset thì e nên tải 1 subset cụ thể ví dụ gr1_arms_only.CanSor
+hay cần thiết tải hết data ạ
+1 subset như v thì khoảng 70GB ạ
+Nếu có thể làm 2 pha như thầy nói thì nhóm tiến hành tải và encode từng phần, do kích thức embedding nhỏ hơn so với frame gốc nên lưu trữ đỡ tốn chi phí. Sau khi VLM encode xong phần nào thì xóa raw data phần đó đi, như vậy vẫn process được toàn bộ data nhưng không tải hết 1 lần

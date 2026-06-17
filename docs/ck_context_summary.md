@@ -4,6 +4,20 @@ Ngay cap nhat: 10/06/2026.
 
 File nay dung de chuyen ngu canh sang repo/cuoc tro chuyen khac. Noi dung ghi lai muc tieu do an, scope du lieu, cac notebook da co, ket qua Kaggle da chay, va viec can lam tiep.
 
+## Cap Nhat Moi - Strong Official-Mini Pipeline
+
+Da tao va nang cap pipeline moi trong `new_notebook/` theo huong Strong Official-Mini, manh hon pipeline state-only cu:
+
+- Notebook 02 moi prepare official sequence/chunk data voi `states [N,S,44]`, `actions_chunk [N,H,44]`, `action_mask [N,H,44]`, video frame manifest, normalization stats.
+- Notebook 03 moi encode frozen VLM features, sau do **pretrain DiT/action head from scratch** va **posttrain cung DiT/action head tren task-specific subset**.
+- Notebook 03 output moi gom `pretrain_checkpoint.pt`, `posttrain_checkpoint.pt`, `checkpoint_last.pt`, `pretrain_log.csv`, `posttrain_log.csv`, `train_summary.json`.
+- Notebook 04 moi evaluate denormalized raw metrics cho `OfficialMiniVLDiT_pretrain`, `OfficialMiniVLDiT_posttrain`, va them optional-safe `NVIDIA_GR00T_zero_shot` baseline.
+- Notebook 05 moi giu ablation bat buoc va them bang `pretrain_posttrain_comparison.csv` neu co checkpoint tu Notebook 03.
+- Tai lieu README/plan cua pipeline moi nam o `docs/strong_official_mini_pipeline_plan.md`.
+- Notebook 01 download subsets hien mac dinh khong tai full video nua: `DOWNLOAD_MODE = "data_meta_ego_chunks"`, `CAMERA_KEY = "observation.images.ego_view"`, `VIDEO_CHUNKS = [0, 1, 2]`. Neu van day disk thi giam `VIDEO_CHUNKS = [0]` hoac chuyen subset do sang `data_meta_only`.
+
+Ket luan moi: pipeline Strong Official-Mini da khop hon voi conversation cua thay vi dua `pretrain + posttrain DiT head` vao luong chinh. Zero-shot NVIDIA baseline la optional-safe, neu khong load duoc thi ghi skipped reason thay vi lam crash notebook.
+
 ## 1. De Tai Va Yeu Cau CK
 
 De tai nhom: **Isaac GR00T: N1 through N1.6**.
@@ -336,4 +350,3 @@ Neu can tiet kiem GPU:
 
 - Notebook 04 chay truoc vi nhanh va bat buoc cho Evaluation.
 - Notebook 05 co the chay sau; neu thoi gian it, van nen chay du 3 config mac dinh de co ablation hop le.
-
