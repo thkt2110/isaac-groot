@@ -42,8 +42,11 @@ hf_token*
 # -----------------------------
 # External clones / upstream repos
 # -----------------------------
+Isaac-GR00T*/
 Isaac-GR00T_offical/
 Isaac-GR00T_official/
+*GR00T_offical*/
+*GR00T_official*/
 
 # -----------------------------
 # Hugging Face / Kaggle cache
