@@ -1,0 +1,406 @@
+[
+  {
+    "index": 1,
+    "file": "01_download_01_PlaceMilkToMicrowave_ego3.ipynb",
+    "subset": "gr1_arms_waist.PlaceMilkToMicrowave",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 8.942,
+    "num_parquet_files": 10074,
+    "num_video_files": 3000,
+    "elapsed_sec": 2136.98,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 2,
+    "file": "01_download_02_PotatoToMicrowave_ego3.ipynb",
+    "subset": "gr1_arms_waist.PotatoToMicrowave",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 10.248,
+    "num_parquet_files": 10053,
+    "num_video_files": 3000,
+    "elapsed_sec": 985.38,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 3,
+    "file": "01_download_03_PlateToBowl_ego5.ipynb",
+    "subset": "gr1_arms_waist.PlateToBowl",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "video_chunk_count": 5,
+    "size_gb": 7.044,
+    "num_parquet_files": 10075,
+    "num_video_files": 5000,
+    "elapsed_sec": 21728.24,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 4,
+    "file": "01_download_04_PlateToPlate_ego3.ipynb",
+    "subset": "gr1_arms_waist.PlateToPlate",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 4.322,
+    "num_parquet_files": 10053,
+    "num_video_files": 3000,
+    "elapsed_sec": 2521.67,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 5,
+    "file": "01_download_05_TrayToPlate_ego3.ipynb",
+    "subset": "gr1_arms_waist.TrayToPlate",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 4.329,
+    "num_parquet_files": 10074,
+    "num_video_files": 3000,
+    "elapsed_sec": 1253.2,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 6,
+    "file": "01_download_06_WineToCabinet_ego3.ipynb",
+    "subset": "gr1_arms_waist.WineToCabinet",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 11.408,
+    "num_parquet_files": 10053,
+    "num_video_files": 3000,
+    "elapsed_sec": 2306.1,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 7,
+    "file": "01_download_07_CuttingboardToBasket_ego3.ipynb",
+    "subset": "gr1_arms_waist.CuttingboardToBasket",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 5.254,
+    "num_parquet_files": 10056,
+    "num_video_files": 3000,
+    "elapsed_sec": 1336.43,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 8,
+    "file": "01_download_08_CuttingboardToPan_ego3.ipynb",
+    "subset": "gr1_arms_waist.CuttingboardToPan",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 4.712,
+    "num_parquet_files": 10114,
+    "num_video_files": 3000,
+    "elapsed_sec": 1244.59,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 9,
+    "file": "01_download_09_PlaceBottleToCabinet_ego3.ipynb",
+    "subset": "gr1_arms_waist.PlaceBottleToCabinet",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 8.486,
+    "num_parquet_files": 10032,
+    "num_video_files": 3000,
+    "elapsed_sec": 1773.04,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 10,
+    "file": "01_download_10_PlacematToBowl_ego3.ipynb",
+    "subset": "gr1_arms_waist.PlacematToBowl",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 4.639,
+    "num_parquet_files": 10063,
+    "num_video_files": 3000,
+    "elapsed_sec": 1797.54,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 11,
+    "file": "01_download_11_TrayToPot_ego3.ipynb",
+    "subset": "gr1_arms_waist.TrayToPot",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 4.28,
+    "num_parquet_files": 10068,
+    "num_video_files": 3000,
+    "elapsed_sec": 1369.23,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 12,
+    "file": "01_download_12_TrayToTieredShelf_ego3.ipynb",
+    "subset": "gr1_arms_waist.TrayToTieredShelf",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 5.064,
+    "num_parquet_files": 10037,
+    "num_video_files": 3000,
+    "elapsed_sec": 1329.65,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 13,
+    "file": "01_download_13_CanSort_ego3.ipynb",
+    "subset": "gr1_arms_only.CanSort",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 1.247,
+    "num_parquet_files": 1000,
+    "num_video_files": 1000,
+    "elapsed_sec": 275.8,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 14,
+    "file": "01_download_14_CanToDrawer_ego3.ipynb",
+    "subset": "gr1_arms_waist.CanToDrawer",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 7.692,
+    "num_parquet_files": 10107,
+    "num_video_files": 3000,
+    "elapsed_sec": 14436.97,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 15,
+    "file": "01_download_15_CupToDrawer_ego3.ipynb",
+    "subset": "gr1_arms_waist.CupToDrawer",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 6.365,
+    "num_parquet_files": 10036,
+    "num_video_files": 3000,
+    "elapsed_sec": 1682.83,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 16,
+    "file": "01_download_16_CuttingboardToPot_ego3.ipynb",
+    "subset": "gr1_arms_waist.CuttingboardToPot",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 4.268,
+    "num_parquet_files": 10058,
+    "num_video_files": 3000,
+    "elapsed_sec": 1651.63,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 17,
+    "file": "01_download_17_CuttingboardToTieredBasket_ego5.ipynb",
+    "subset": "gr1_arms_waist.CuttingboardToTieredBasket",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "video_chunk_count": 5,
+    "size_gb": 7.498,
+    "num_parquet_files": 10040,
+    "num_video_files": 4999,
+    "elapsed_sec": 14491.66,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 18,
+    "file": "01_download_18_PlacematToPlate_ego3.ipynb",
+    "subset": "gr1_arms_waist.PlacematToPlate",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 4.348,
+    "num_parquet_files": 10056,
+    "num_video_files": 3000,
+    "elapsed_sec": 1015.06,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 19,
+    "file": "01_download_19_PlateToPan_ego3.ipynb",
+    "subset": "gr1_arms_waist.PlateToPan",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 4.712,
+    "num_parquet_files": 10072,
+    "num_video_files": 3000,
+    "elapsed_sec": 8684.73,
+    "original_failed_duplicate_removed": false
+  },
+  {
+    "index": 20,
+    "file": "01_download_20_TrayToCardboardBox_ego3.ipynb",
+    "subset": "gr1_arms_waist.TrayToCardboardBox",
+    "status": "downloaded",
+    "downloaded_ok": true,
+    "download_mode": "data_meta_ego_chunks",
+    "camera_key": "observation.images.ego_view",
+    "video_chunk_ids": [
+      0,
+      1,
+      2
+    ],
+    "video_chunk_count": 3,
+    "size_gb": 4.504,
+    "num_parquet_files": 10105,
+    "num_video_files": 3000,
+    "elapsed_sec": 1653.71,
+    "original_failed_duplicate_removed": false
+  }
+]
